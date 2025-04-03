@@ -1,0 +1,38 @@
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; // Center content vertically
+  padding: 20px;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, red, blue, yellow, purple, green);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: grey; // Default color for the text
+  font-size: 4rem; // Increased font size
+}
+
+.shine-animation {
+  display: inline-block;
+  animation: color-fill 2s steps(50) forwards; // Reduced duration from 12s to 6s
+}
+
+@keyframes color-fill {
+  0% {
+    background-size: 0% 100%;
+    -webkit-text-fill-color: grey;
+  }
+  100% {
+    background-size: 100% 100%;
+    -webkit-text-fill-color: transparent;
+  }
+}
